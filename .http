@@ -1,0 +1,118 @@
+GET http://localhost:5000/bookGet
+
+
+###
+
+POST http://localhost:5000/bookCreate
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Philosopher's Stone",
+  "author": "J.K. Rowling",
+  "ISBN": "978-0-7475-3274-2",
+  "publisher": "Bloomsbury",
+  "year_published": "1997"
+}
+
+###
+
+PATCH http://localhost:5000/bookUpdate/4
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Philosopher's Stone"
+}
+
+###
+
+
+DELETE http://localhost:5000/bookDelete/4
+
+###
+
+GET http://localhost:5000/Search?keyword=ABC
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "table": "admin",
+  "username": "admin",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "email": "example@gmail.com",
+  "username": "user1234",
+  "password": "password"
+}
+
+###
+
+PATCH http://localhost:5000/updateUser/User2345
+Content-Type: application/json
+
+{
+  "username": "User234"
+}
+
+###
+PATCH http://localhost:5000/password
+Content-Type: application/json
+
+{
+  "username": "Bill",
+  "password": "password_!",
+  "new_password": "password_223"
+}
+
+###
+
+PATCH http://localhost:5000/changePassword
+Content-Type: application/json
+
+{
+  "table": "staff",
+  "username": "User123",
+  "password": "password123",
+  "new_password": "password456"
+}
+
+###
+
+POST http://localhost:5000/insertstaff
+Content-Type: application/json
+
+{
+  "username": "CTM",
+  "fullname": "Chan Tai Man",
+  "password": "password123"
+}
+
+###
+
+DELETE http://localhost:5000/deletestaff
+Content-Type: application/json
+
+{
+  "username": "CTM",
+  "fullname": "Chan Tai Man"
+}
+
+###
+
+PATCH http://localhost:5000/passwordchange
+Content-Type: application/json
+
+{
+  "username": "CTM",
+  "fullname": "Chan Tai Man",
+  "new_password": "password233"
+}
